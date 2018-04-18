@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Trailer : MonoBehaviour 
 {
 	[SerializeField] private Text texto_Trailer;
-	[SerializeField] private GameObject panelTrailer;
+	//[SerializeField] private GameObject panelTrailer;
  	private void Start () 
 	{
 		StartCoroutine(TrailerSoftware());
@@ -21,10 +21,10 @@ public class Trailer : MonoBehaviour
 		yield return new WaitForSeconds(2.5f);
 		texto_Trailer.text = "es de gran importancia el buen manejo que se le debe dar al software de realidad virtual";
 		yield return new WaitForSeconds(3f);
-		panelTrailer.GetComponent<RectTransform>().sizeDelta = new Vector2(55f,19.84f);
+		//panelTrailer.GetComponent<RectTransform>().sizeDelta = new Vector2(55f,19.84f);
 		texto_Trailer.text = "de entornos logisticos.";
 		yield return new WaitForSeconds(3.1f);
-		panelTrailer.GetComponent<RectTransform>().sizeDelta = new Vector2(110,19.84f);
+		//panelTrailer.GetComponent<RectTransform>().sizeDelta = new Vector2(110,19.84f);
 		texto_Trailer.text = "El desarrollo continúo y la fuerte penetración en la sociedad de la tecnología en general,";
 		yield return new WaitForSeconds(4f);
 		texto_Trailer.text = "y de los videojuegos en particular, es incuestionable.";
