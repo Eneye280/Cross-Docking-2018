@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Assets/Logistica/Scenes/SceneGame.unity
+    guid: a6d3dad740de3d74ba3315f793b1cb1f

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SelectionNationalUrban : MonoBehaviour 
 {
-	[Tooltip("Gameobject[0] = enable cajas nacionales / Gameobject[1] = cajas urbanas")]
+	[Tooltip("Gameobject[0] = camera inicial / Gameobject[1] = camera del jugador en escena / Gameobject[2] = enable cajas nacionales / Gameobject[3] = cajas urbanas")]
 	public GameObject[] enableDesable;
 	private void Start () 
 	{
-		enableDesable[0].SetActive(false);
+		enableDesable[0].SetActive(true);
 		enableDesable[1].SetActive(false);
+		enableDesable[2].SetActive(false);
+		enableDesable[3].SetActive(false);
 	}
 
 	private void Update()
@@ -22,13 +24,17 @@ public class SelectionNationalUrban : MonoBehaviour
 		#region Nacional
 		if(Input.GetKey(KeyCode.A))
 		{
-			enableDesable[0].SetActive(true);
+			enableDesable[0].SetActive(false);
+			enableDesable[1].SetActive(true);
+			enableDesable[2].SetActive(true);
 		}
 		#endregion
 		#region Urbano
 		else if(Input.GetKey(KeyCode.D))
 		{
+			enableDesable[0].SetActive(false);
 			enableDesable[1].SetActive(true);
+			enableDesable[3].SetActive(true);
 		}
 		#endregion
 	}

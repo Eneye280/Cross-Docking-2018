@@ -1,31 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ControladorInput : MonoBehaviour
+namespace Cross_Docking
 {
-
-    private SteamVR_TrackedObject trackedObject;
-
-    public SteamVR_Controller.Device Controller
+    public class ControladorInput : MonoBehaviour
     {
-        get { return SteamVR_Controller.Input((int)trackedObject.index); }
-    }
+        private SteamVR_TrackedObject trackedObject;
 
+        public SteamVR_Controller.Device Controller
+        {
+            get { return SteamVR_Controller.Input((int)trackedObject.index); }
+        }
 
-    public bool triggerPresionado { get; private set; }
-
-    private void Awake()
-    {
-        trackedObject = GetComponent<SteamVR_TrackedObject>();
-    }
-
-
-    private void Update()
-    {
-        if (Controller.GetHairTriggerDown())
-            triggerPresionado = true;
-        else if (Controller.GetHairTriggerUp())
-            triggerPresionado = false;
+        private void Awake()
+        {
+            trackedObject = GetComponent<SteamVR_TrackedObject>();
+        }
     }
 }
